@@ -1,0 +1,32 @@
+{
+  "name": "pokeweb",
+  "version": "1.0.0",
+  "description": "Pagina web prueba de Apis de Pokemon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juanpav78/PokeWeb.git"
+  },
+  "keywords": [
+    "Pagina",
+    "Web",
+    "Pokemon",
+    "Api",
+    "Javascript",
+    "SASS"
+  ],
+  "author": "Juan Alvarado (PandaX)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juanpav78/PokeWeb/issues"
+  },
+  "homepage": "https://github.com/Juanpav78/PokeWeb#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.53.0"
+  }
+}
