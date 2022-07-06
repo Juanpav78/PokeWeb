@@ -1,0 +1,12 @@
+.footer{
+    background-color: $pokeBlanco;
+    border-top: 2rem solid $pokeGrisDark;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    .circle{
+        top: -3rem;
+        left: -1.4rem;
+       
+    }
+}
