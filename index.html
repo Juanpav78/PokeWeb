@@ -18,25 +18,22 @@
             
             <div class="circle"></div>
             <div class="nav">
-                <a href="">Mi Portafolio</a>
-                <a href="">PokeApi</a>
+                <a target="_blank" href="https://github.com/Juanpav78">Mi Portafolio</a>
+                <a target="_blank" href="https://pokeapi.co/">PokeApi</a>
             </div>
         </div>
         
     </header>
     <main>
         <div class="contain">
+            
             <div class="interfaz">
                 <div class="pokeBuscar">
-                    <input type="text" value="Nombre">
-                    <input type="text" value="Id">
-                    <button>Buscar</button>
-
+                    <input type="text"  id="valorDeBusqueda" placeholder="Nombre o ID del pokemon" value="" >
+                    <button id="btnBuscar" onclick="Actualizar(false)">Buscar</button>
                 </div>
-                <div class="pokeInfo">
-
-                </div>
-                
+                <div class="pokeInfo"></div>
+                <button class="btnRandom" onclick="Actualizar(true)">Random</button>
             </div>
             
         </div>

@@ -9,4 +9,45 @@ main{
     padding: 2rem;
     border-radius: 5px;
     align-items: center;
+    height: 67.5rem;
+
+    .pokeBuscar{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin-bottom: 2rem;
+        height: auto;
+        input{
+            flex: 3;
+            border: 5px solid #222224;
+            font-family: $text;
+            font-weight: 600;
+            padding-left: 1rem;
+        }
+        button{
+            flex: 1;
+            border: none;
+            
+
+            
+        }
+    }
+
+    .btnRandom, button{
+        background-color: $pokeGrisDark;
+        color: $pokeBlanco;
+        font-family: $text;
+        font-weight: 600;
+        font-size: 3rem;
+        padding: 1rem 2rem;
+        cursor: pointer;
+
+        &:hover{
+            background-color: darken($pokeGrisDark, 1);
+            color: $pokeAmarillo;
+        }
+    }
+    .btnRandom{
+        width: 80%;
+    }
 }

@@ -1,9 +1,9 @@
 .pokeInfo{
-    height: 29.2rem;
+    min-height: 29.2rem;
     width: 80%;
     display: flex;
     border: 1rem solid $pokeGrisDark;
-
+    margin-bottom: 2rem;
     .sprite{
         flex: 1;
         display: flex;
@@ -49,6 +49,8 @@
         justify-content: center;
         gap: 2rem;
         .poke_tipo{
+            text-align: center;
+            width: 12rem;
             padding: .5rem 2rem;
             border: .3rem solid $pokeGrisDark;
             text-transform: uppercase;

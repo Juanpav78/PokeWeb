@@ -1,6 +1,7 @@
 'Use Strict'
 let b="";
 let c="";
+let existe=true;
 const a= document.querySelector(".pokeInfo");
 const url = "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0";
 let num1 = "";
@@ -39,13 +40,11 @@ function zfill(number, width) {
     }
 }
 
-
 fetch(url)
     .then(res => res.json())
     .then(res => {
         if(num1 == null || num1 == ""){
             num1 = Math.floor(Math.random() * (905 - 1) + 1);
-            console.log(num1)
         }
         const url2 = res.results[num1].url;
         fetch(url2)
@@ -73,5 +72,126 @@ fetch(url)
                 </div>`})
     })
 
+function getValue(ress){
+    const inputPokemon = document.getElementById("valorDeBusqueda") ;
+    let valor =parseInt(inputPokemon.value);
+    resultado ="";
+    if(isNaN(valor)){
+        let valorNombre = inputPokemon.value;
+        let nombre = valorNombre.toLowerCase();
+        let  i= 0;
+        let auxString ="", auxString2="";
+        while(true){
+            auxString= ress.results[i].name;
+            auxString2="";
+            for (let i = 0; i < auxString.length; i++) {
+                let a = auxString[i];
+                if (a=="-" ){
+                    break;
+                }
+                auxString2+=a;
+                
+            }
 
+            if(nombre == auxString2 || nombre == auxString){
+                existe=true;
+                break;
+            }
+
+            if(i>905){
+                i=984;
+                existe=false;
+                break;
+            }
+            
+            i++;
+        }
+        valor= i;
+        resultado = valor;
+
+    }else if(valor<=0){
+        existe=false;
+        valor=984;
+        resultado =valor;
+    }else{
+        valor=valor-1;
+        resultado =valor;
+    }
+
+    return resultado;
+
+}
+
+function Actualizar(random =false){
     
+    fetch(url)
+    .then(res => res.json())
+    .then(res => {
+        
+        if (random == true){
+            valor = Math.floor(Math.random() * (905 - 1) + 1);
+            existe = true;
+        }else{
+            valor= getValue(res);
+        }
+        const url2 = res.results[valor].url;
+        fetch(url2)
+            .then(res => res.json())
+            .then(res =>  {
+                b= crearHabilidades(res);
+                c= crearTipo(res);
+                d = zfill(res.id, 3);
+
+                if(existe){
+                    a.innerHTML= 
+                    `<div class="sprite ${res.types[0].type.name}">
+                        <img src="${res.sprites.front_default}" alt="pokemon">
+                    </div>
+                    <div class="info">
+                        <div class="poke_info">
+                            <p class="poke_nombre">${res.species.name}</p>
+                            <p class="poke_id">${d}</p>
+                        </div>
+                        <div class="tipo">
+                        ${c}
+                        </div>
+                        <div class="habilites">
+                        ${b}
+                        </div>
+                        
+                    </div>`
+                }else{
+                    a.innerHTML= 
+                    `<div class="sprite ${res.types[0].type.name}">
+                        <img src="${res.sprites.front_default}" alt="pokemon">
+                    </div>
+                    <div class="info">
+                        <div class="poke_info">
+                            <p class="poke_nombre">No existe ese pokemon</p>
+                            <p class="poke_id">---</p>
+                        </div>
+                        <div class="tipo">
+                        <p class="poke_tipo ${res.types[0].type.name}">Ninguno</p>
+                        </div>
+                        <div class="habilites">
+                        <p class="poke_habilidad">Ninguna</p>
+                        <p class="poke_habilidad">Ninguna</p>
+                        <p class="poke_habilidad">Ninguna</p>
+                        <p class="poke_habilidad">Ninguna</p>
+                        </div>
+                        
+                    </div>`
+                }
+                })
+    })
+    c="";
+    b="";
+}
+
+var input = document.getElementById("valorDeBusqueda");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("btnBuscar").click();
+  }
+});
