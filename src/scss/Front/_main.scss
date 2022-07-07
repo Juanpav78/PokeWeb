@@ -1,6 +1,9 @@
+main{
+    margin: 2rem 0;
+}
 .interfaz{
     display: flex;
-    background-color: white;
+    background-color: $pokeBlanco;
     flex-direction: column;
     justify-content: center;
     padding: 2rem;

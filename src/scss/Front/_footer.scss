@@ -2,11 +2,12 @@
     background-color: $pokeBlanco;
     border-top: 2rem solid $pokeGrisDark;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     overflow: hidden;
+    align-items: center;
     .circle{
         top: -3rem;
-        left: -1.4rem;
        
     }
 }

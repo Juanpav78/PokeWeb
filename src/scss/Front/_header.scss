@@ -9,14 +9,24 @@
         overflow: hidden;
         align-items: center;
     }
+
     .logo{
-        font-family: $pokeFont;
-        font-size: 3.6rem;
-        color:$pokeAmarillo;
-        text-shadow:0 0 3px black, 0px -5px 0 #3B4CCA, 0px 5px 0 #3B4CCA, -5px 0px 0 #3B4CCA, 5px 0px 0 #3B4CCA;
+        display: flex;
+        img{
+            width: 14rem;
+        }
+    
+        .logo_text{
+            font-family: $pokeFont;
+            font-size: 4rem;
+            color:$pokeGrisDark;
+            margin: 0;
+        }
     }
+    
     .circle{
-        top: 5.5rem;
+        left: 2rem;
+        top: 4.3rem;
     }
     .nav{    
         display: flex;

@@ -1,0 +1,83 @@
+.pokeInfo{
+    height: 29.2rem;
+    width: 80%;
+    display: flex;
+    border: 1rem solid $pokeGrisDark;
+
+    .sprite{
+        flex: 1;
+        display: flex;
+        border-right: 1rem solid $pokeGrisDark;
+        img{
+            width: 20rem;
+            margin: auto;
+        }
+    }
+
+    .info{
+        flex: 1;
+
+        .poke_info{
+            background-color: $pokeGrisDark;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: .5rem solid $pokeAmarillo;
+            .poke_nombre, .poke_id{
+                color: $pokeBlanco;
+                padding: .5rem 2rem;
+            }
+            .poke_nombre{
+                text-transform: uppercase;
+                margin: auto 0;
+                font-size: 2.4rem;
+
+            }
+    
+            .poke_id{
+                font-size: 3.2rem;
+                margin: 0;
+            }
+        }
+    }
+
+   
+
+    
+
+    .tipo {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        .poke_tipo{
+            padding: .5rem 2rem;
+            border: .3rem solid $pokeGrisDark;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
+    }
+    
+    .habilites{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center;
+        padding: 1.5rem 0;
+        gap: 1.5rem;
+        background-color: $pokeAzul;
+        .poke_habilidad{
+
+            margin: 0;
+            text-transform: uppercase;
+            background-color: $pokeBlanco;
+            text-align: center;
+            width: 90%;
+            padding: 0.5rem;
+            border-radius: 5px;
+
+            &:hover{
+                background-color: $pokeAmarillo;
+            }
+        }
+    }
+    
+}

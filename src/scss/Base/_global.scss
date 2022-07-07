@@ -26,3 +26,8 @@ body {
     border-radius:50% ;
     border: 2rem solid $pokeGrisDark;
 }
+
+p, h2{
+    font-family: $text;
+    font-weight: $bold;
+}

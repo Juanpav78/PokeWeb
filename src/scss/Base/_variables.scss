@@ -6,6 +6,7 @@ $pokeRojoDark: 	#cc0000;
 $pokeBlanco: #f0f0f0;
 $pokeGrisDark: #222224;
 $pokeAmarillo: #FFDE00;
+$pokeAzul: #3B4CCA;
 
 //font size
 $delgada: 300;
@@ -16,3 +17,68 @@ $black: 900;
 //font family
 $pokeFont:  'Pokemon Solid', sans-serif;
 $text: 'Rajdhani', sans-serif;
+
+//colores Tipo de Pokemon:
+.fire{
+    background-color:rgba(230, 62, 32, 0.76);
+}
+
+.water{
+    background-color: #5361ccd0;
+}
+
+.grass{
+    background-color: #1b9625c0;
+}
+
+.poison{
+    background-color: #c723c7cb;
+}
+
+.normal{
+    background-color: #666666ce;
+}
+
+.dragon{
+    background-color: #7023c7cb;
+}
+
+.ghost{
+    background-color: #9600dbcb;
+}
+.bug{
+    background-color: #85d358d3;
+}
+
+.fighting{
+    background-color: #bb5c30;
+}
+.electric{
+    background-color: #dac50ad2;
+}
+
+.rock{
+    background-color: #9b8343;
+}
+.ground{
+    background-color: #dab95e;
+}
+
+.dark{
+    background-color: #635b46;
+}
+.flying{
+    background-color: #85b3f8;
+}
+.psychic{
+    background-color: #eb6ed6d0;
+}
+.fairy{
+    background-color: #f7a4fa;
+}
+.ice{
+    background-color: #64c5e2;
+}
+.steel{
+    background-color: #8b8b8b;
+}
