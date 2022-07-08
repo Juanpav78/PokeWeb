@@ -17,15 +17,16 @@
         }
     
         .logo_text{
-            font-family: $pokeFont;
-            font-size: 4rem;
+            font-family: $text;
+            font-size: 4.5rem;
             color:$pokeGrisDark;
             margin: 0;
+            text-decoration: underline;
         }
     }
     
     .circle{
-        left: 2rem;
+        left: 1.3rem;
         top: 4.3rem;
     }
     .nav{    

@@ -5,6 +5,12 @@ let existe=true;
 const a= document.querySelector(".pokeInfo");
 const url = "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0";
 let num1 = "";
+let missigno =[
+    "build/img/missigno1.png",
+    "build/img/missigno2.png",
+    "build/img/missigno3.png",
+    "build/img/missigno4.png"
+]
 
 function crearHabilidades(ress){
     for (let i = 0; i < ress.abilities.length; i++) {
@@ -55,7 +61,7 @@ fetch(url)
                 d = zfill(res.id, 3);
                 a.innerHTML= 
                 `<div class="sprite ${res.types[0].type.name}">
-                    <img src="${res.sprites.front_default}" alt="pokemon">
+                <img src="${res.sprites.front_default == null ? missigno[(Math.floor(Math.random() * (4 - 0)))] : res.sprites.front_default }" alt="pokemon">
                 </div>
                 <div class="info">
                     <div class="poke_info">
@@ -143,9 +149,11 @@ function Actualizar(random =false){
                 d = zfill(res.id, 3);
 
                 if(existe){
+
+
                     a.innerHTML= 
                     `<div class="sprite ${res.types[0].type.name}">
-                        <img src="${res.sprites.front_default}" alt="pokemon">
+                        <img src="${res.sprites.front_default == null ? missigno[(Math.floor(Math.random() * (4 - 0)))] : res.sprites.front_default }" alt="pokemon">
                     </div>
                     <div class="info">
                         <div class="poke_info">

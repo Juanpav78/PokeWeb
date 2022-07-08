@@ -9,7 +9,7 @@ html {
 body {
     font-size: 1.6rem;
     line-height: 1.8;
-    background-color: $greyLigth;
+    background-color: $pokeBlanco;
 }
 
 .contain{
@@ -30,4 +30,8 @@ body {
 p, h2{
     font-family: $text;
     font-weight: $bold;
+}
+
+main{
+    background-color: $greyLigth;
 }
