@@ -120,6 +120,7 @@ function getValue(ress){
         valor=984;
         resultado =valor;
     }else{
+        existe=true;
         valor=valor-1;
         resultado =valor;
     }
