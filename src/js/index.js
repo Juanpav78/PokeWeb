@@ -115,7 +115,7 @@ function getValue(ress){
         valor= i;
         resultado = valor;
 
-    }else if(valor<=0){
+    }else if(valor<=0 || valor > 905){
         existe=false;
         valor=984;
         resultado =valor;
@@ -128,6 +128,8 @@ function getValue(ress){
     return resultado;
 
 }
+
+
 
 function Actualizar(random =false){
     
