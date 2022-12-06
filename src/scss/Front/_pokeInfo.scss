@@ -87,6 +87,12 @@
     
 }
 
+@include tablet{
+    .pokeInfo{
+        flex-direction: column;
+    }
+}
+
 @-webkit-keyframes mov {
     0% {
       -webkit-transform: rotate(0);

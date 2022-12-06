@@ -9,7 +9,7 @@ main{
     padding: 2rem;
     border-radius: 5px;
     align-items: center;
-    height: 60.5rem;
+    min-height: 60.5rem;
 
     .pokeBuscar{
         display: flex;
@@ -30,6 +30,18 @@ main{
             
 
             
+        }
+    }
+
+    @include tablet{
+        .pokeBuscar{
+            flex-direction: column;
+
+            input{
+                flex: auto;
+                height: 6rem;
+            }
+           
         }
     }
 

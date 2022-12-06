@@ -8,6 +8,7 @@
         justify-content: space-between;
         overflow: hidden;
         align-items: center;
+        padding: 2rem;
     }
 
     .logo{
@@ -26,14 +27,15 @@
     }
     
     .circle{
-        left: 1.3rem;
-        top: 4.3rem;
+        left: 3rem;
+        top: 6rem;
     }
     .nav{    
         display: flex;
         align-items: center;
         gap: 2rem;
         a{
+            min-width: 12.7rem;
             font-size: 2rem;
             color: $pokeGrisDark;
             text-decoration: underline 2.5px $pokeAmarillo;
@@ -46,6 +48,30 @@
                 color: $pokeAmarillo;
                 transition: all .5s;
             }
+        }
+
+        
+    }
+    @include tablet{
+        .contain{
+            flex-direction: column;
+            padding: 4rem;
+        }
+        .logo{
+            margin-left: -3rem;
+        }
+        .circle{
+            left: 0rem;
+            top: 6.7rem;
+        }
+        .nav{    
+            margin-top: -6rem;
+            gap: .5rem;
+            a{
+                padding: 1rem;
+            }
+    
+            
         }
     }
 }
